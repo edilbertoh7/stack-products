@@ -5,6 +5,7 @@ import ShowProducts from './components/ShowProducts'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CreateProducts from './components/CreateProducts'
 import EditProducts from './components/EditProducts'
+import Home from './components/Home'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,9 +14,11 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<ShowProducts />} />
+
+      <Route path='home' element={<Home />} />
       <Route path='/create' element={<CreateProducts />} />
       <Route path='/edit/:id' element={<EditProducts />} />
+      <Route path='/show' element={<ShowProducts />} />
     </Routes>
     </BrowserRouter>
     </>
